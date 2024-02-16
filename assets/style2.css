@@ -1,0 +1,126 @@
+.title {
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.subtitle {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.section {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    padding: 4px 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: #df7529;
+    color: #f5f5dc;
+}
+
+.button:hover {
+    background-color: #d2691e;
+}
+
+.button:active {
+    background-color: #c76016;
+}
+
+.button:disabled {
+    background-color: #c76016;
+}
+
+.list-section__button {
+    display: block;
+    align-self: flex-end;
+}
+
+.input-section__input {
+    width: 80%;
+    font-size: 20px;
+    padding: 4px;
+}
+
+.input-section__input:focus-visible {
+    outline-color: #df7529;
+}
+
+.input-section__form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-section__task {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+    display: block;
+    position: relative;
+    padding-right: 26px;
+    margin-bottom: 18px;
+    user-select: none;
+}
+
+.list-section__task input {
+    height: 0;
+    width: 0;
+}
+
+.list-section__checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #dedbdb;
+}
+
+/* On mouse-over, add a grey background color */
+.list-section__task:hover input ~ .list-section__checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.list-section__task input:checked ~ .list-section__checkmark {
+    background-color: #df7529;
+}
+
+/* Create the list-section__checkmark/indicator (hidden when not checked) */
+.list-section__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #f5f5dc;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Show the list-section__checkmark when checked */
+.list-section__task input:checked ~ .list-section__checkmark:after {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.list-section__message {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    color: #808080;
+    text-align: center;
+}
